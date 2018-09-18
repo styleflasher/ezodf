@@ -40,13 +40,6 @@
 class eZOOConverter
 {
     /*!
-     Constructor
-    */
-    function eZOOConverter()
-    {
-    }
-
-    /*!
       Converts the eZ Publish object with the given node id into an OpenOffice.org Writer document.
       The filename to the generated file is returned.
     */

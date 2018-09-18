@@ -71,7 +71,7 @@ class eZOOImport
     /*!
      Constructor
     */
-    function eZOOImport()
+    public function __construct()
     {
         $this->ERROR['number'] = 0;
         $this->ERROR['value'] = '';
@@ -428,7 +428,7 @@ class eZOOImport
             $eZSectionDefinitionStyleName = array();
             foreach( $automaticStyleArray->item( 0 )->childNodes as $child )
             {
-                if( $child->nodeType === XML_ELEMENT_NODE && 
+                if( $child->nodeType === XML_ELEMENT_NODE &&
                         $child->getAttributeNS( self::NAMESPACE_STYLE, 'parent-style-name' ) === 'eZSectionDefinition' )
                 {
                      $eZSectionDefinitionStyleName[] = $child->getAttributeNS( self::NAMESPACE_STYLE, 'name' );
@@ -750,7 +750,7 @@ class eZOOImport
                                 // Look for paragraphs in the section
                                 foreach ( $sectionNodeHash[$sectionName]->childNodes as $paragraph )
                                 {
-                                    if( !$paragraph->hasChildNodes() ) 
+                                    if( !$paragraph->hasChildNodes() )
                                     {
                                         continue;
                                     }

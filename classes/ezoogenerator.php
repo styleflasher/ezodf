@@ -48,13 +48,6 @@ class eZOOGenerator
     const ERROR_TEMPLATE_NOT_READABLE = 1010;
     const ERROR_COULD_NOT_COPY = 1011;
 
-    /*!
-     Constructor
-    */
-    function eZOOGenerator()
-    {
-    }
-
     function writeDocument( )
     {
         $ooINI = eZINI::instance( 'odf.ini' );
@@ -94,10 +87,10 @@ class eZOOGenerator
         $templateName = $ooINI->variable( 'ODFExport', 'TemplateName' );
         if ( $useTemplate )
         {
-            $templateRepository = "extension/ezodf/templates";   
+            $templateRepository = "extension/ezodf/templates";
             if ( $ooINI->hasVariable( 'ODFExport', 'TemplateRepository' ) )
             {
-                $templateRepository = trim( $ooINI->variable( 'ODFExport', 'TemplateRepository' ), '/' );   
+                $templateRepository = trim( $ooINI->variable( 'ODFExport', 'TemplateRepository' ), '/' );
             }
             $templateFile = $templateRepository . "/" . $templateName;
 

@@ -39,9 +39,9 @@
 
 class eZOpenofficeUploadHandler extends eZContentUploadHandler
 {
-    function eZOpenofficeUploadHandler()
+    function __construct()
     {
-        $this->eZContentUploadHandler( 'OOo file handling', 'openoffice' );
+        parent::__construct( 'OOo file handling', 'openoffice' );
     }
 
     /*!
